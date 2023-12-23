@@ -17,8 +17,8 @@ const Searchbar = () => {
         className="searchbar-input"
         />   
 
-        <button type="submit" className="searchbar-btn">
-          Search
+        <button type="submit" className="searchbar-button">
+
         </button>
     </form>
   )

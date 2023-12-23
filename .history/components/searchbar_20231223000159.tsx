@@ -18,7 +18,7 @@ const Searchbar = () => {
         />   
 
         <button type="submit" className="searchbar-btn">
-          Search
+          
         </button>
     </form>
   )

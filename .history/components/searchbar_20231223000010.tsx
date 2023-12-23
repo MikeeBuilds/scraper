@@ -14,12 +14,8 @@ const Searchbar = () => {
         <input
         type="text"
         placeholder="Search for products"
-        className="searchbar-input"
-        />   
+        className="" 
 
-        <button type="submit" className="searchbar-btn">
-          Search
-        </button>
     </form>
   )
 }
