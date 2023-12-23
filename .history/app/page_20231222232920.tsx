@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 
 const Home = () => {
@@ -10,10 +9,7 @@ const Home = () => {
            <p className='smal-text'>
             Smart Shopping Begins Here
             <Image 
-              src="/assets/icons/arrow-right.svg"
-              height={16}
-              width={16}
-              alt='arrow-right'
+              
             />
            </p>
           </div>

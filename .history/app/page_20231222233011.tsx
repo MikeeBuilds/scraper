@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
             <Image 
               src="/assets/icons/arrow-right.svg"
               height={16}
-              width={16}
+              width={27}
               alt='arrow-right'
             />
            </p>
