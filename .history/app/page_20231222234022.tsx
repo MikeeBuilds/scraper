@@ -1,6 +1,6 @@
+import Searchbar from '@/components/searchbar'
 import Image from 'next/image'
 import React from 'react'
-import Searchbar from '../components/searchbar'
 
 const Home = () => {
   return (

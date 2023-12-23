@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import Searchbar from '../components/searchbar'
 
 const Home = () => {
   return (
@@ -26,7 +25,7 @@ const Home = () => {
             PriceHoot, self-serve ecommerce platform, helps you track your product prices, get notified when they change, and save money on your shopping.
            </p>
 
-           <Searchbar/>
+           <SearchBar>
           </div>
 
           HeroCarousel
