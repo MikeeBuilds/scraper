@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import { extractCurrency, extractDescription, extractPrice } from "../utils";
+import { extractPrice } from "../utils";
 
 export async function scrapeAmazonProduct(url: string) {
     if(!url) return;
@@ -45,40 +45,14 @@ export async function scrapeAmazonProduct(url: string) {
 
         const outOfStock = $('#availability span').text().trim().toLowerCase() === 'Curently unavailable';
 
-        const images = 
+        const image = 
           $('#imgBlkFront').attr('data-a-dynamic-image') ||
-          $('#landingImage').attr('data-a-dynamic-image') ||
-          '{}'
+          $('#landingImage').attr('data-a-dynamic-image');
 
-          const imageUrls = Object.keys(JSON.parse(images));
-
-          const currency = extractCurrency($('.a-price-symbol'));
-          const discountRate = $('.savingsPercentage').text().replace(/[-%]/g, '');
+          const imageUrls = object.keys(JSON.parse(images))
         
-          const description = extractDescription($);
 
-          // Construct data object with scraped data information
-          const data = {
-            url,
-            currency: currency || '$',
-            image: imageUrls[0],
-            title,
-            currentPrice: Number(currentPrice) || Number(originalPrice),
-            originalPrice: Number(originalPrice) || Number(currentPrice),
-            priceHistory: [],
-            discountRate: Number(discountRate),
-            category: 'category',
-            reviewsCount: 100,
-            stars: 4.5,
-            isOutOfStock: outOfStock,
-            description,
-            lowestPrice: Number(currentPrice) || Number(originalPrice),
-            highestPrice: Number(originalPrice) || Number(currentPrice),
-            averagePrice: Number(currentPrice) || Number(originalPrice),
-          }
-          return data;
-
-        
+        console.log({title, currentPrice, originalPrice, outOfStock, image});
     } catch (error: any) {
         throw new Error(`Failed to scrape product: ${error.message}`);
     }

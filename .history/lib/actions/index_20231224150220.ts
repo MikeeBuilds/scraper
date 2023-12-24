@@ -12,8 +12,6 @@ export async function scrapeAndStoreProduct(productUrl: string) {
         if(!scrapedProduct) return;
 
         
-
-
     } catch (error: any) {
         throw new Error(`Failed to create/update product: ${error.message}`);
     }
