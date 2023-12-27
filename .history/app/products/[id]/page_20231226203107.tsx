@@ -160,25 +160,23 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                    </h3>
 
                    <div className="flex flex-col gap-4">
-                      {product?.description?.split('\n')}
+                      {product?.description?.split('\n').map((item, index) => (
+                         <p className="text-black-100" key={index}>
+                            {item}
+                         </p>
+                      ))}
                    </div>
                 </div>
 
-                <button className="btn w-fit mx-auto flex items-center justify-center gap-3 min-w-[200px]">
+                <button className="btn ">
                     <Image
                     src="/assets/icons/bag.svg"
                     alt="check"
                     width={22}
                     height={22}
                     />
-
-                    <Link href="/" className="text-base text-white">
-                        Buy Now
-                    </Link>
                 </button>
             </div>
-
-            
         </div>
     )
 }

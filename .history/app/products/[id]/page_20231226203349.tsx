@@ -161,6 +161,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
                    <div className="flex flex-col gap-4">
                       {product?.description?.split('\n')}
+                      ))}
                    </div>
                 </div>
 
@@ -178,7 +179,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                 </button>
             </div>
 
-            
+
         </div>
     )
 }

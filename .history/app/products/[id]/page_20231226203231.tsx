@@ -160,7 +160,11 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                    </h3>
 
                    <div className="flex flex-col gap-4">
-                      {product?.description?.split('\n')}
+                      {product?.description?.split('\n').map((item, index) => (
+                         <p className="text-black-100" key={index}>
+                            {item}
+                         </p>
+                      ))}
                    </div>
                 </div>
 
@@ -177,8 +181,6 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                     </Link>
                 </button>
             </div>
-
-            
         </div>
     )
 }
