@@ -17,8 +17,8 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
   return (
     <div className="product-container">
-        <div className="flex gap-28 xl:flex-row flex-col">
-            <div className="product-image">
+        <div>
+            <div>
                 <Image
                   src={product.image}
                   alt={product.title}
