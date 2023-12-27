@@ -70,8 +70,8 @@ export async function getAllProducts() {
 
         const products = await Product.find();
 
-        return products; 
+        return products;
     } catch (error) {
-        console.log(error);
+        
     }
 }
