@@ -1,8 +1,8 @@
 import PriceInfoCard from "@/components/PriceInfoCard"
-import ProductCard from "@/components/ProductCard"
 import { getProductById, getSimilarProducts } from "@/lib/actions"
 import { formatNumber } from "@/lib/utils"
 import { Product } from "@/types"
+import { M_PLUS_Code_Latin } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
 import { redirect } from "next/navigation"
@@ -156,7 +156,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-16 ">
+            <div className="flex flex-col gap-16 border-2 border-red-500">
                 <div className="flex flex-col gap-5">
                    <h3 className="text-2xl text-secondary font-semibold">
                     Product Description
@@ -183,14 +183,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
             {similarProducts && similarProducts?.length > 0 && (
                 <div className="py-14 flex flex-col gap-2 w-full">
-                  <p className="section-text">Similar Products</p>
-
-                  <div className="flex flex-wrap gap-10 mt-7 w-full">
-                    {similarProducts.map((product) => (
-                        <ProductCard key={product._id} product={product} />
-                    ))}
-                    
-                  </div>
+                  <M_PLUS_Code_Latin></pcl>
                 </div>
             )}
         </div>
