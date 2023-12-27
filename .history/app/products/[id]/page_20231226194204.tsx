@@ -145,16 +145,11 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                            title="Lowest Price"
                            iconSrc="/assets/icons/arrow-down.svg"
                            value={`${product.currency} ${formatNumber(product.lowestPrice)}`}
+                           borderColor="#beffc5"
                          />
                        </div>
                     </div>
-
-                    Modal
                 </div>
-            </div>
-
-            <div className="flex flex-col gap-16 border-2 border-red">
-
             </div>
         </div>
     )

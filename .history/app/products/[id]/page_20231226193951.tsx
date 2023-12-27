@@ -130,31 +130,29 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                            title="Current Price"
                            iconSrc="/assets/icons/price-tag.svg"
                            value={`${product.currency} ${formatNumber(product.currentPrice)}`}
+                           borderColor="#b6dbff"
                          />
                          <PriceInfoCard
                            title="Average Price"
                            iconSrc="/assets/icons/chart.svg"
                            value={`${product.currency} ${formatNumber(product.averagePrice)}`}
+                           borderColor="#b6dbff"
                          />
                          <PriceInfoCard
                            title="Highest Price"
                            iconSrc="/assets/icons/arrow-up.svg"
                            value={`${product.currency} ${formatNumber(product.highestPrice)}`}
+                           borderColor="#b6dbff"
                          />
                          <PriceInfoCard
-                           title="Lowest Price"
-                           iconSrc="/assets/icons/arrow-down.svg"
-                           value={`${product.currency} ${formatNumber(product.lowestPrice)}`}
+                           title="Current Price"
+                           iconSrc="/assets/icons/price-tag.svg"
+                           value={`${product.currency} ${formatNumber(product.currentPrice)}`}
+                           borderColor="#b6dbff"
                          />
                        </div>
                     </div>
-
-                    Modal
                 </div>
-            </div>
-
-            <div className="flex flex-col gap-16 border-2 border-red">
-
             </div>
         </div>
     )

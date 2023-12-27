@@ -148,13 +148,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                          />
                        </div>
                     </div>
-
-                    Modal
                 </div>
-            </div>
-
-            <div className="flex flex-col gap-16 border-2 border-red">
-
             </div>
         </div>
     )
