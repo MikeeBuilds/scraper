@@ -1,0 +1,7 @@
+import nodemailer from 'nodemailer';
+
+
+export const Notification = {
+    WELCOME: 'welcome TO PriceHoot!',
+    
+}
